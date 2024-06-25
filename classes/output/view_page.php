@@ -153,6 +153,9 @@ class view_page implements templatable, renderable {
         $data['issuecode'] = $this->issuecode;
         if ($this->issuecode) {
             $data['viewurl'] = \tool_certificate\template::view_url($data['issuecode'])->out(false);
+            $data['facebooklogourl'] = (new \moodle_url('/admin/tool/certificate/pix/facebook-logo.png'))->out(false);
+            $data['linkedinlogourl'] = (new \moodle_url('/admin/tool/certificate/pix/linkedin-logo.png'))->out(false);
+            $data['xlogourl'] = (new \moodle_url('/admin/tool/certificate/pix/x-logo.png'))->out(false);
         }
 
         return $data;

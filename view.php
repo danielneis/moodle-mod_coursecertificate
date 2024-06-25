@@ -43,7 +43,7 @@ $output = $PAGE->get_renderer('coursecertificate');
 $outputpage = new \mod_coursecertificate\output\view_page($id, $page, $perpage, $course, $cm);
 $data = $outputpage->export_for_template($output);
 
-if (!empty($data['viewurl']) && $download) {
+if (!empty($data['viewurl']) && $download && !get_config('tool_certificate', 'displaysharepage')) {
     // When we link to the course module for the student, we link with &download=1 parameter
     // and with target=_blank. In other situations where the links to the view page is displayed
     // (index page, logs, hardcoded links, etc), we need to make sure that the certificate will open in a

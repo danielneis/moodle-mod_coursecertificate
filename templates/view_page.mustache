@@ -33,8 +33,15 @@
 }}
 <div data-region="mod_coursecertificate_view">
     {{#viewurl}}
-        <div class="mdl-align mb-3">
+        <div class="mdl-align mb-3 justify-content-center">
+            <iframe src="{{viewurl}}" width="640" height="480" class="mb-5"></iframe>
+            <p>
             <a class="btn btn-primary" href="{{viewurl}}" target="_blank">{{#str}}viewcertificate, tool_certificate{{/str}}</a>
+            </p>
+            <p class="mt-3">Share on social networks:</p>
+            <a style="margin-right: 1em;" href="https://www.facebook.com/sharer/sharer.php?u={{viewurl}}" title="Share on Facebook"><img width="48" height="48" src="{{facebooklogourl}}" alt="Facebook logo"></a>
+            <a style="margin-right: 1em;" href="https://www.linkedin.com/shareArticle?mini=true&url={{viewurl}}" title="Share on LinkedIn"><img  width="48" height="48" src="{{linkedinlogourl}}" alt="LinkedIn logo"></a>
+            <a href="https://x.com/share?url={{viewurl}}" title="Share on X"><img width="48" height="48" src="{{xlogourl}}" alt="X logo"></a>
         </div>
     {{/viewurl}}
     {{#studentview}}
